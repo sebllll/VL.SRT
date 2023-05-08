@@ -1,0 +1,24 @@
+1
+00:00:00,050 --> 00:00:10,000
+Dummy Dummy Dummy
+Zweite Zeile
+
+2
+00:00:08,000 --> 00:00:12,000
+Zeile eins
+Zeile 2
+
+3
+00:00:12,000 --> 00:00:15,000
+huhu, hier bin ich
+
+4
+00:00:15,500 --> 00:00:18,000
+aller guten dinge sind wie immer drei
+
+5
+00:00:18,500 --> 00:00:28,000
+Aber hier gibt es sogar noch eine nummer vier. toll, oder?
+Und mehrzeilig!
+Juhuu
+
