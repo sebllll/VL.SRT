@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/sebllll/VL.SRT</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>A VL Nodeset for Subtitles in SRT format</summary>
-    <description>A VL wrapper for ong.andrew's Universal.Common.Subtitles library</description>
+    <description>A VL wrapper for ong.andrew's Universal.Common.Subtitles library.</description>
     <copyright>Copyright © 2023 by sebl</copyright>
     <tags>VL, subtitle, srt</tags>
 	<license type="expression">LGPL-3.0-only</license>
