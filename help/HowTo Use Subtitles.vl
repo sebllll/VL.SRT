@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="DiZf4M95Y1LNU3havFNoE6" LanguageVersion="2023.5.0" Version="0.128">
   <NugetDependency Id="AyNTzLo6Zy3QG1qExOC2rf" Location="VL.CoreLib" Version="2023.5.0" />
   <Patch Id="HnihO31mtWDPwzPeYApqZw">
-    <Canvas Id="GSVmHXutDgpOEbwM0wDDPl" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="GSVmHXutDgpOEbwM0wDDPl" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -20,6 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SRT" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="UxRgljfN89rPSHPBOOsqDQ" Name="filename" Kind="InputPin" />
             <Pin Id="Bd9QjR9S5a5L3bhp0Ch7G1" Name="Read" Kind="InputPin" />
             <Pin Id="CCW6I4Vrr8hL9g0UxA1OYJ" Name="Time" Kind="InputPin" />
@@ -37,14 +38,15 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="SllOdzOcitBNoT1UX1L0cW" Comment="" Bounds="482,320,368,100" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="440,611,83,26" Id="NBFvmqTy7IEPErJRz723gr">
+          <Node Bounds="440,579,83,26" Id="NBFvmqTy7IEPErJRz723gr">
             <p:NodeReference LastCategoryFullName="SRT.SRT" LastDependency="VL.SRT.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="GetAllSubtitles" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="U5RQgNHdcUUM3Uk5KQuD21" Name="Input" Kind="StateInputPin" />
             <Pin Id="MISquekgM6RPo9bOCUlEoD" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="CPU85qjPTFJMsh0Zo2QnoQ" Name="SRT" Kind="OutputPin" />
+            <Pin Id="CPU85qjPTFJMsh0Zo2QnoQ" Name="Subtitles" Kind="OutputPin" />
           </Node>
           <Pad Id="M2h88o3UBvZPl7Yh4RxiA4" Comment="a list of all subtitles in the file" Bounds="520,728,224,228" ShowValueBox="true" isIOBox="true">
             <p:Value />
@@ -156,6 +158,7 @@
               <CategoryReference Kind="Category" Name="SRT" />
               <Choice Kind="ProcessAppFlag" Name="SRTWriter" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="JGWj81j8KD2QBg2x6tsRDw" Name="Subtitles" Kind="InputPin" />
             <Pin Id="O5GDhLHHygtPP9jpUcWFvB" Name="Path" Kind="InputPin" />
             <Pin Id="JkCP67oZy6hP0PwYIqje1z" Name="Automatic Order" Kind="InputPin" />
@@ -179,7 +182,7 @@
           <Node Bounds="554,1110,46,26" Id="UmmhtJh9BWiLMH3n0kWtfQ">
             <p:NodeReference LastCategoryFullName="SRT.Subtitle" LastDependency="VL.SRT.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="Subtitle" />
+              <CategoryReference Kind="ClassType" Name="Subtitle" NeedsToBeDirectParent="true" />
               <Choice Kind="OperationCallFlag" Name="Create" />
             </p:NodeReference>
             <Pin Id="K9XMtwYpCHRLG9vcgN2cI7" Name="Output" Kind="StateOutputPin" />
@@ -342,6 +345,15 @@
           </Pad>
           <Overlay Id="PODClYBEY82Nbua5ClswXN" Name="Create Subtitles" Bounds="497,1067,476,599" />
           <Overlay Id="KXGQr5MSZ13MMDTTwvHJAM" Name="Inspect Subtitle" Bounds="1066,635,284,414" />
+          <Pad Id="NknjISwt6fLN8TJeBH37ey" Bounds="764,565,35,19" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="Bc1bK7meGZONTAFnLgZECq" Name="Create" />
         <Patch Id="FrARsbY1REPQWJE0rSUH62" Name="Update" />

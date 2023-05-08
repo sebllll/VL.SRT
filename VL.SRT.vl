@@ -8,7 +8,7 @@
     ************************ SRT ************************
 
 -->
-      <Node Name="SRT" Bounds="241,258" Id="AS3Yav44DsuL7ABLHW54qn">
+      <Node Name="SRT" Bounds="241,258" Id="AS3Yav44DsuL7ABLHW54qn" Summary="A SRT Subtitle Reader">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -371,7 +371,7 @@
           <Link Id="V2JamxQKurdPDSCohIcLyn" Ids="QwuOFqPlVuPMKVpyae2sMu,TtOHLFLNXITNIDoEQ9dWWO" IsHidden="true" />
           <Link Id="Q9npeRM0V9sP3cwzSMAt0c" Ids="AW8VLQvWw14PgveCgi8Wey,MgmH3wYXFVTMRcO0XL8drG" IsHidden="true" />
           <Link Id="IrcOIDgkBkKQdwX2Gnc207" Ids="T2PVNkUI4yPQGd2QbjSuGM,V7S5Qne20blOMP1QplUmIM" />
-          <Slot Id="Pz1fLcjMWBbPU6ww65d55f" Name="SRT" />
+          <Slot Id="Pz1fLcjMWBbPU6ww65d55f" Name="Subtitles" />
           <Link Id="G9UOqxWYRlMLGqkhv3aXIW" Ids="GYv46kK7p5TPTouOkKbtDP,PA2RzMKIcHANtXzkwJjNGr" IsHidden="true" />
           <Link Id="P10LplrmV7COKn4577GN6t" Ids="T2PVNkUI4yPQGd2QbjSuGM,EZaAd6aGV35QRHCQ6qBAoh" />
           <Link Id="B7lGk55um8vMFkkzEBmg98" Ids="EZaAd6aGV35QRHCQ6qBAoh,MZsLTYozlKfN4DH5aI9cBE" IsHidden="true" />
@@ -408,7 +408,7 @@
           <Link Id="IYDlqc0GwD6NnsFFeJ1fmJ" Ids="II8bgYZUvljMt8wxd68E46,JW6np1U0XdhOH4XTQIQFvb" />
           <Link Id="I4ZFSYGTa2LP8KLMobWtMM" Ids="OhwkOqreyayPjIkxW0iH9Y,II8bgYZUvljMt8wxd68E46" IsHidden="true" />
           <Patch Id="Jv7IWnU7StTOLE7IGRa2eL" Name="Create" />
-          <Patch Id="G7mpqJW2lEkLdRWYXg7px7" Name="GetSrtStrings">
+          <Patch Id="G7mpqJW2lEkLdRWYXg7px7" Summary="Return all Subtitle Strings for a given Time (in seconds)" Name="GetSrtStrings">
             <Pin Id="QwuOFqPlVuPMKVpyae2sMu" MergeId="60541" Name="Time" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
@@ -416,10 +416,10 @@
             </Pin>
             <Pin Id="MgmH3wYXFVTMRcO0XL8drG" Name="Output" Kind="OutputPin" Bounds="-703,1064" />
           </Patch>
-          <Patch Id="JfZoh9NUxXeNxuDRQvuhb1" Name="GetAllSubtitles">
-            <Pin Id="MZsLTYozlKfN4DH5aI9cBE" Name="SRT" Kind="OutputPin" />
+          <Patch Id="JfZoh9NUxXeNxuDRQvuhb1" Summary="Return all Subtitles of the file" Name="GetAllSubtitles">
+            <Pin Id="MZsLTYozlKfN4DH5aI9cBE" Name="Subtitles" Kind="OutputPin" />
           </Patch>
-          <Patch Id="DZvi6CnePFOQB4EUW4ctan" Name="Open" ParticipatingElements="MTPf7HbnEJtPWkrAgH0N19" ManuallySortedPins="true">
+          <Patch Id="DZvi6CnePFOQB4EUW4ctan" Name="ReadFile" ParticipatingElements="MTPf7HbnEJtPWkrAgH0N19" ManuallySortedPins="true">
             <Pin Id="GYv46kK7p5TPTouOkKbtDP" Name="filename" Kind="InputPin" DefaultValue="..\assets\Dummy.srt">
               <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Path" />
@@ -437,14 +437,14 @@
     ************************ SRTWriter ************************
 
 -->
-      <Node Name="SRTWriter" Bounds="241,303" Id="QEu16MVCPyzNthmRD9YCXk">
+      <Node Name="SRTWriter" Bounds="241,303" Id="QEu16MVCPyzNthmRD9YCXk" Summary="Write a Sequence of Subtitles to disk">
         <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ClassDefinition" Name="Class" />
         </p:NodeReference>
         <Patch Id="I793gyExXUbOfmE2A710c7">
           <Canvas Id="CloFzI58xzzLF1YqZFSwJx" CanvasType="Group">
-            <ControlPoint Id="Myn9UFlf56dO5an1H4EpZf" Bounds="300,246" />
-            <ControlPoint Id="O6YIf15jWiYMzJRwK83aM4" Bounds="414,284" />
+            <ControlPoint Id="Myn9UFlf56dO5an1H4EpZf" Bounds="299,246" />
+            <ControlPoint Id="O6YIf15jWiYMzJRwK83aM4" Bounds="411,284" />
             <Node Bounds="285,315,251,389" Id="OUlSky7bpQqND4mPJtQx1p">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -524,7 +524,7 @@
                   <Patch Id="TcZSA7k1p3fLeTpctpPqX5" ManuallySortedPins="true">
                     <Patch Id="Mcf79cvWuhPNGpvKUI3ZGr" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="BlcVa9R6ix6PT0MuwJtABH" Name="Then" ManuallySortedPins="true" />
-                    <Node Bounds="409,501,93,74" Id="Rkay9WbTjElN2tBtYlhicZ">
+                    <Node Bounds="409,501,103,74" Id="Rkay9WbTjElN2tBtYlhicZ">
                       <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
                         <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                         <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
@@ -556,8 +556,8 @@
               </Patch>
             </Node>
             <ControlPoint Id="VLNblsJBGzQLBuuury4SWL" Bounds="287,219" />
-            <ControlPoint Id="JPKVXAc43yJO98u1XV2Ksb" Bounds="390,214" />
-            <ControlPoint Id="MCao9djYqrtLFLsLmyW0xZ" Bounds="360,287" />
+            <ControlPoint Id="JPKVXAc43yJO98u1XV2Ksb" Bounds="389,214" />
+            <ControlPoint Id="MCao9djYqrtLFLsLmyW0xZ" Bounds="358,287" />
           </Canvas>
           <ProcessDefinition Id="BUQsMC4w8ryNYvZgocBA9Y">
             <Fragment Id="LXVOMhtRv3WPQWSFU2s4fK" Patch="PWGEpy8yYHGL8XowwjqpUE" Enabled="true" />
